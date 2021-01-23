@@ -1,23 +1,25 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "prettier",
-    "jest"
-  ],
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "plugins": ["@typescript-eslint", "prettier", "jest"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended"
   ],
   "rules": {
-    "no-console": 1,
-    "prettier/prettier": 2
+    "@typscript-eslint/no-unused-vars": "off",
+    "@typscript-eslint/no-unused-params": "off",
+    "no-console": "warn"
   },
   "env": {
     "browser": true,
     "node": true,
-    "jest/globals": true
+    "jest": true
   }
 }

@@ -1,5 +1,6 @@
 import express, { Response } from 'express';
 import helmet from 'helmet';
+import { ErrorResponseObject } from './common';
 
 import routes from './routes';
 
@@ -13,11 +14,7 @@ app.use('/', routes);
 
 // default catch all handler
 app.all('*', (_, res: Response): void => {
-  res.status(404).json({
-    success: false,
-    message: 'route not defined',
-    data: null,
-  });
+  res.status(404).json(new ErrorResponseObject('route not defined'));
 });
 
 export default app;

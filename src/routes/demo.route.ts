@@ -1,13 +1,8 @@
 import { Response, Router } from 'express';
+import { SuccessResponseObject } from '../common';
 
 const r = Router();
 
-r.get('/', (_, res: Response): void => {
-  res.json({
-    success: true,
-    message: 'demo path live 🚀',
-    data: null,
-  });
-});
+r.get('/', (_, res: Response) => res.json(new SuccessResponseObject('demo path live 🚀')));
 
 export default r;

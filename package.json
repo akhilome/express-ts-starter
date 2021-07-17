@@ -7,7 +7,7 @@
     "build": "rimraf ./build && tsc",
     "prestart": "yarn build",
     "start": "node build/server.js",
-    "dev": "nodemon",
+    "start:dev": "nodemon src/server.ts",
     "test": "jest",
     "lint": "eslint src --ext js,ts"
   },

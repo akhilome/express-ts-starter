@@ -1,4 +1,4 @@
-import logger from '../../src/utils/logger';
+import { logger } from '../../src/common';
 
 describe('Logger Util', () => {
   const consoleLogSpy = jest.spyOn(console, 'log');

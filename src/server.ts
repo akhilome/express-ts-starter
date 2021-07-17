@@ -1,8 +1,8 @@
 import http from 'http';
 
 import app from './app';
+import { logger } from './common';
 import { env } from './config';
-import logger from './utils/logger';
 
 process.on('rejectionHandled', () => null); // so node stops dumping rejectionHandled messages to stdout
 process.on('unhandledRejection', (_, promise) => {

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 type UNKNOWN_ENTITY = Record<string, unknown> | unknown[];
 
-export class Logger {
+class Logger {
   private prettify(object: UNKNOWN_ENTITY): string {
     return JSON.stringify(object, null, 2);
   }
@@ -40,4 +40,4 @@ export class Logger {
   }
 }
 
-export default new Logger();
+export const logger = new Logger();

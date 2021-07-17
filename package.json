@@ -1,5 +1,5 @@
 {
-  "name": "api-tss",
+  "name": "express-ts-starter",
   "version": "0.0.1",
   "description": "node-express ts starter",
   "main": "build/server.js",

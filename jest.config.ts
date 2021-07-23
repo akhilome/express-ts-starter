@@ -9,6 +9,6 @@ export default {
     '!src/config/*.ts',
   ],
   testEnvironment: 'node',
-  testRegex: './(tests?|src)/.*\\.(test|spec)?\\.(ts|ts)$',
+  testRegex: './(tests?|src)/.*\\.(test|spec)?\\.(js|ts)$',
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
 };

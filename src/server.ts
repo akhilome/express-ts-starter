@@ -6,14 +6,10 @@ import { env } from './config';
 
 process.on('rejectionHandled', () => null); // so node stops dumping rejectionHandled messages to stdout
 process.on('unhandledRejection', (_, promise) => {
-  logger.console('Haha, unhandled promise rejection go brrr...');
-  promise.catch((e) => {
-    // do proper rejected promise handling here
-    logger.console(e);
-  });
+  promise.catch((e) => logger.error('Haha, unhandled promise rejection go brrr...', e));
 });
 
 const server = http.createServer(app);
 
 server.listen(env.port);
-server.on('listening', () => logger.console(`server running on port ${env.port}`));
+server.on('listening', () => logger.info(`server running on port ${env.port}`));
